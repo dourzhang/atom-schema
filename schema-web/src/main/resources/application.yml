@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: schema-web
+
+logging:
+  level:
+    root: info
+  file: ${spring.application.name}.log
+
+management:
+  security:
+    enabled: false
+---
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+#feign:
+#  compression:
+#    request:
+#      enabled: true
+#      mime-types: text/xml,application/xml,application/json
+#      min-request-size: 1024

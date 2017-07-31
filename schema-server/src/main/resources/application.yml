@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: schema-server
+server:
+  port: 8090
+
+logging:
+  level:
+    root: INFO
+  file: ${spring.application.name}.log
+---
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://db.local.net:9009/atom_pojo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+
